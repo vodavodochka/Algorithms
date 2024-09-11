@@ -32925,11 +32925,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Algorithms\\Labs\\Lab1\\Lab1\\Lab1.csproj",
+      "projectUniqueName": "D:\\Algorithms\\Algorithms\\Lab1\\Lab1.csproj",
       "projectName": "Lab1",
-      "projectPath": "D:\\Algorithms\\Labs\\Lab1\\Lab1\\Lab1.csproj",
+      "projectPath": "D:\\Algorithms\\Algorithms\\Lab1\\Lab1.csproj",
       "packagesPath": "C:\\Users\\MadMax\\.nuget\\packages\\",
-      "outputPath": "D:\\Algorithms\\Labs\\Lab1\\Lab1\\obj\\",
+      "outputPath": "D:\\Algorithms\\Algorithms\\Lab1\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

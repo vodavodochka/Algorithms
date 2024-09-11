@@ -10,6 +10,7 @@ namespace Lab1
     {
         private List<IterationData> _data;
         private Stopwatch _stopwatch;
+        private bool Drawing = true;
 
         public MainPage()
         {
@@ -23,34 +24,46 @@ namespace Lab1
             graphicsView.Drawable = chartDrawable;
 
             // Запуск измерения времени выполнения итераций
-            MeasureIterations();
+            
         }
 
-        private void MeasureIterations()
+        public void GraphDraw(object sender, EventArgs args)
         {
-            for (int i = 1; i <= 2000; i++)
+            _data.Clear();
+            if (Drawing)
+            {
+                Drawing = false;
+                MeasureIterations(1);
+            }
+            
+        }
+
+        private void MeasureIterations(int process_id)
+        {
+            for (int n = 1; n <= 2000; n++)
             {
                 _stopwatch.Restart();
 
-                //Будут if-ы которые подвязаны к кнопкам чтоы выполнять различные алгоритмы :)
-
                 // Симуляция выполнения итерации
-                SimulateIteration();
+                SimulateIteration(n, process_id);
 
                 _stopwatch.Stop();
-                _data.Add(new IterationData { IterationNumber = i, TimeSpent = _stopwatch.Elapsed.TotalSeconds });
+                _data.Add(new IterationData { IterationNumber = n, TimeSpent = _stopwatch.Elapsed.TotalSeconds });
             }
 
             // Обновление графика
             var chartDrawable = new ChartDrawable(_data);
             graphicsView.Drawable = chartDrawable;
+            Drawing = true;
         }
 
-        private void SimulateIteration()
+        private void SimulateIteration(int n, int id)
         {
-            
-            // Симуляция выполнения итерации (например, задержка)
-            System.Threading.Thread.Sleep(1); // Задержка в 1 миллисекунду
+            if (id == 1)
+            {
+                //Метод 1 , который принимает n как входные данные
+            }
+            //....
         }
     }
 

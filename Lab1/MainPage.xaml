@@ -10,6 +10,12 @@
                       WidthRequest="600"
                       HeightRequest="500"
                       BackgroundColor="BlanchedAlmond"/>
+        <Button Text="IDI naxui"
+                WidthRequest="100"
+                HeightRequest="50"
+                Background="Beige"
+                Clicked="GraphDraw"
+            />
     </StackLayout>
 </ContentPage>
 
