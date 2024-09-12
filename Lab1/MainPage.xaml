@@ -10,12 +10,31 @@
                       WidthRequest="600"
                       HeightRequest="500"
                       BackgroundColor="BlanchedAlmond"/>
-        <Button Text="IDI naxui"
-                WidthRequest="100"
-                HeightRequest="50"
-                Background="Beige"
-                Clicked="GraphDraw"
+        <StackLayout>
+            <Button Text="Test"
+                    WidthRequest="100"
+                    HeightRequest="50"
+                    Background="Beige"
+                    Clicked="GraphDraw"/>
+        
+            <Entry Placeholder="How much data"
+                   TextChanged="OnEntryData"
+                   WidthRequest="100"
+                   HeightRequest="50"
+                   TextColor="Black"/>
+
+            <Entry Placeholder="How much iterations"
+                   TextChanged="OnEntryIterations"
+                   WidthRequest="100"
+                   HeightRequest="50"
+                   TextColor="Black"/>
+
+        </StackLayout>
+        <Label x:Name="TestText"
+               Text="asdasdasdasd"
+               TextColor="Black"
             />
+
     </StackLayout>
 </ContentPage>
 

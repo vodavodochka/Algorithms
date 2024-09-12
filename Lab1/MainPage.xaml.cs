@@ -9,38 +9,101 @@ namespace Lab1
     public partial class MainPage : ContentPage
     {
         private List<IterationData> _data;
+        private List<IterationData> _data_temp;
         private Stopwatch _stopwatch;
         private bool Drawing = true;
+        public int dataMax = 1;
+        public int loopNumber = 1;
 
         public MainPage()
         {
             InitializeComponent();
 
             _data = new List<IterationData>();
+            _data_temp = new List<IterationData>();
             _stopwatch = new Stopwatch();
 
             // Создание графика
             var chartDrawable = new ChartDrawable(_data);
             graphicsView.Drawable = chartDrawable;
+            TestText.Text = "asd";
 
             // Запуск измерения времени выполнения итераций
-            
         }
 
         public void GraphDraw(object sender, EventArgs args)
         {
+            // Очистка данных перед началом нового измерения
             _data.Clear();
+            _data_temp.Clear();
+
             if (Drawing)
             {
                 Drawing = false;
-                MeasureIterations(1);
+                for (int iteration = 1; iteration <= loopNumber; iteration++)
+                {
+                    MeasureIterations(1, iteration);
+                }
+
+                // Вычисление среднего арифметического значения и обновление графика
+                CalculateAverageData();
+                var chartDrawable = new ChartDrawable(_data);
+                graphicsView.Drawable = chartDrawable;
+                Drawing = true;
             }
-            
         }
 
-        private void MeasureIterations(int process_id)
+        public void OnEntryIterations(object sender, EventArgs e)
         {
-            for (int n = 1; n <= 2000; n++)
+            string text = ((Entry)sender).Text;
+
+            if (string.IsNullOrEmpty(text))
+            {
+                loopNumber = 1;
+            }
+            else
+            {
+                if (int.TryParse(text, out int number))
+                {
+                    loopNumber = number;
+                }
+                else
+                {
+                    loopNumber = 1;
+                }
+            }
+
+            // Обновление графика при изменении количества итераций
+            //GraphDraw(sender, e);
+        }
+
+        public void OnEntryData(object sender, EventArgs e)
+        {
+            string text = ((Entry)sender).Text;
+
+            if (string.IsNullOrEmpty(text))
+            {
+                dataMax = 1;
+            }
+            else
+            {
+                if (int.TryParse(text, out int number))
+                {
+                    dataMax = number;
+                }
+                else
+                {
+                    dataMax = 1;
+                }
+            }
+
+            // Обновление графика при изменении максимального количества данных
+            //GraphDraw(sender, e);
+        }
+
+        private void MeasureIterations(int process_id, int it)
+        {
+            for (int n = 1; n <= dataMax; n++)
             {
                 _stopwatch.Restart();
 
@@ -48,20 +111,28 @@ namespace Lab1
                 SimulateIteration(n, process_id);
 
                 _stopwatch.Stop();
-                _data.Add(new IterationData { IterationNumber = n, TimeSpent = _stopwatch.Elapsed.TotalSeconds });
+                _data_temp.Add(new IterationData { IterationNumber = n, TimeSpent = _stopwatch.Elapsed.TotalSeconds });
             }
+        }
 
-            // Обновление графика
-            var chartDrawable = new ChartDrawable(_data);
-            graphicsView.Drawable = chartDrawable;
-            Drawing = true;
+        private void CalculateAverageData()
+        {
+            if (_data_temp.Count == 0) return;
+
+            var groupedData = _data_temp.GroupBy(d => d.IterationNumber).Select(g => new IterationData
+            {
+                IterationNumber = g.Key,
+                TimeSpent = g.Average(d => d.TimeSpent)
+            }).ToList();
+
+            _data.AddRange(groupedData);
         }
 
         private void SimulateIteration(int n, int id)
         {
             if (id == 1)
             {
-                //Метод 1 , который принимает n как входные данные
+                Thread.Sleep(10);
             }
             //....
         }
@@ -93,7 +164,7 @@ namespace Lab1
 
             var chartWidth = width - marginLeft - marginRight;
             var chartHeight = height - marginTop - marginBottom;
-            var xScale = chartWidth / 2000;
+            var xScale = chartWidth / _data.Count;
             var yScale = chartHeight / maxTime;
 
             // Отрисовка осей
@@ -121,7 +192,8 @@ namespace Lab1
             canvas.FontSize = 12;
 
             // Метки на нижней оси (итерации)
-            for (int i = 0; i <= 2000; i += 250)
+            int step = _data.Count < 8 ? 1 : _data.Count / 8;
+            for (int i = 0; i <= _data.Count; i += step)
             {
                 var x = marginLeft + i * xScale;
                 canvas.DrawString(i.ToString(), x, height - marginBottom + 20, HorizontalAlignment.Center);
@@ -133,7 +205,7 @@ namespace Lab1
             {
                 var y = height - marginBottom - i * timeStep * yScale;
                 var timeValue = i * timeStep;
-                var timeString = timeValue < 1 ? timeValue.ToString("F4") : timeValue.ToString("F2");
+                var timeString = timeValue < 1 ? timeValue.ToString("F6") : timeValue.ToString("F2");
                 canvas.DrawString(timeString, marginLeft - 40, (float)y, HorizontalAlignment.Right);
             }
         }
