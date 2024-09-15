@@ -11,29 +11,25 @@
                       HeightRequest="500"
                       BackgroundColor="BlanchedAlmond"/>
         <StackLayout>
-            <Button Text="Test"
+            <Button Text="Matrix Multi"
                     WidthRequest="100"
                     HeightRequest="50"
                     Background="Beige"
-                    Clicked="GraphDraw"/>
-        
-            <Entry Placeholder="How much data"
+                    Clicked="MatrixMulti"/>
+
+            <Entry Placeholder="Data"
                    TextChanged="OnEntryData"
                    WidthRequest="100"
                    HeightRequest="50"
                    TextColor="Black"/>
 
-            <Entry Placeholder="How much iterations"
+            <Entry Placeholder="Iterations"
                    TextChanged="OnEntryIterations"
                    WidthRequest="100"
                    HeightRequest="50"
                    TextColor="Black"/>
 
         </StackLayout>
-        <Label x:Name="TestText"
-               Text="asdasdasdasd"
-               TextColor="Black"
-            />
 
     </StackLayout>
 </ContentPage>

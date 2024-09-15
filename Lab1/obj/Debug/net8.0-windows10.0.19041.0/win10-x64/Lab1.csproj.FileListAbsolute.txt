@@ -355,3 +355,4 @@ D:\Algorithms\Algorithms\Lab1\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qua
 D:\Algorithms\Algorithms\Lab1\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 D:\Algorithms\Algorithms\Lab1\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 D:\Algorithms\Algorithms\Lab1\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+D:\Algorithms\Algorithms\Lab1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MathNet.Numerics.dll

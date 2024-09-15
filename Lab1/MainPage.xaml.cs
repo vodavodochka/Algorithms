@@ -3,6 +3,8 @@ using Microsoft.Maui.Graphics;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Lab1;
+using MathNet.Numerics;
 
 namespace Lab1
 {
@@ -26,12 +28,15 @@ namespace Lab1
             // Создание графика
             var chartDrawable = new ChartDrawable(_data);
             graphicsView.Drawable = chartDrawable;
-            TestText.Text = "asd";
-
             // Запуск измерения времени выполнения итераций
         }
 
-        public void GraphDraw(object sender, EventArgs args)
+        public void MatrixMulti(object sender, EventArgs e)
+        {
+            GraphDraw(1);
+        }
+
+        public void GraphDraw(int Button_ID)
         {
             // Очистка данных перед началом нового измерения
             _data.Clear();
@@ -42,12 +47,17 @@ namespace Lab1
                 Drawing = false;
                 for (int iteration = 1; iteration <= loopNumber; iteration++)
                 {
-                    MeasureIterations(1, iteration);
+                    MeasureIterations(Button_ID, iteration);
                 }
 
                 // Вычисление среднего арифметического значения и обновление графика
                 CalculateAverageData();
-                var chartDrawable = new ChartDrawable(_data);
+
+                // Аппроксимация данных
+                var fittedData = FitData(_data);
+
+                // Обновление графика с аппроксимированными данными
+                var chartDrawable = new ChartDrawable(_data, fittedData);
                 graphicsView.Drawable = chartDrawable;
                 Drawing = true;
             }
@@ -128,11 +138,30 @@ namespace Lab1
             _data.AddRange(groupedData);
         }
 
+        private List<IterationData> FitData(List<IterationData> data)
+        {
+            double[] xData = data.Select(d => (double)d.IterationNumber).ToArray();
+            double[] yData = data.Select(d => d.TimeSpent).ToArray();
+
+            int degree = 2; // Степень полинома
+            double[] polynomialFit = Fit.Polynomial(xData, yData, degree);
+
+            var fittedData = new List<IterationData>();
+            for (int i = 1; i <= dataMax; i++)
+            {
+                double yFit = polynomialFit.Zip(Enumerable.Range(0, degree + 1), (c, p) => c * Math.Pow(i, p)).Sum();
+                fittedData.Add(new IterationData { IterationNumber = i, TimeSpent = yFit });
+            }
+
+            return fittedData;
+        }
+
+
         private void SimulateIteration(int n, int id)
         {
             if (id == 1)
             {
-                Thread.Sleep(10);
+                Lab1.MatrixOperations.MatrixMultiplication(n);
             }
             //....
         }
@@ -141,10 +170,12 @@ namespace Lab1
     public class ChartDrawable : IDrawable
     {
         private readonly List<IterationData> _data;
+        private readonly List<IterationData> _fittedData;
 
-        public ChartDrawable(List<IterationData> data)
+        public ChartDrawable(List<IterationData> data, List<IterationData> fittedData = null)
         {
             _data = data;
+            _fittedData = fittedData;
         }
 
         public void Draw(ICanvas canvas, RectF dirtyRect)
@@ -187,6 +218,23 @@ namespace Lab1
                 canvas.DrawLine(x1, (float)y1, x2, (float)y2);
             }
 
+            // Отрисовка аппроксимированных данных
+            if (_fittedData != null && _fittedData.Count > 0)
+            {
+                canvas.StrokeColor = Colors.Red;
+                canvas.StrokeSize = 1;
+
+                for (int i = 0; i < _fittedData.Count - 1; i++)
+                {
+                    var x1 = marginLeft + _fittedData[i].IterationNumber * xScale;
+                    var y1 = height - marginBottom - (float)_fittedData[i].TimeSpent * yScale;
+                    var x2 = marginLeft + _fittedData[i + 1].IterationNumber * xScale;
+                    var y2 = height - marginBottom - (float)_fittedData[i + 1].TimeSpent * yScale;
+
+                    canvas.DrawLine(x1, (float)y1, x2, (float)y2);
+                }
+            }
+
             // Отрисовка меток на осях
             canvas.FontColor = Colors.Black;
             canvas.FontSize = 12;
@@ -210,6 +258,7 @@ namespace Lab1
             }
         }
     }
+
 
     public class IterationData
     {

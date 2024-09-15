@@ -30,25 +30,25 @@
     <AppXManifest Include="D:\Algorithms\Algorithms\Lab1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-09-12T08:17:10.583</Modified>
+      <Modified>2024-09-13T06:43:58.219</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Algorithms\Algorithms\Lab1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-09-11T05:01:10.188</Modified>
+      <Modified>2024-09-13T06:11:31.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Algorithms\Algorithms\Lab1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Lab1.runtimeconfig.json">
       <PackagePath>Lab1.runtimeconfig.json</PackagePath>
-      <Modified>2024-09-11T05:01:09.954</Modified>
+      <Modified>2024-09-13T06:11:31.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Algorithms\Algorithms\Lab1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Lab1.dll">
       <PackagePath>Lab1.dll</PackagePath>
-      <Modified>2024-09-12T08:17:10.309</Modified>
+      <Modified>2024-09-13T06:43:57.711</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Algorithms\Algorithms\Lab1\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Lab1.exe</PackagePath>
-      <Modified>2024-09-12T08:17:10.384</Modified>
+      <Modified>2024-09-13T06:43:57.786</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Algorithms\Algorithms\Lab1\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -288,7 +288,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Algorithms\Algorithms\Lab1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Lab1.deps.json">
       <PackagePath>Lab1.deps.json</PackagePath>
-      <Modified>2024-09-11T05:01:09.841</Modified>
+      <Modified>2024-09-13T06:11:31.438</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MadMax\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -297,6 +297,10 @@
     <AppxPackagedFile Include="C:\Users\MadMax\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2024-07-08T09:23:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MadMax\.nuget\packages\mathnet.numerics\5.0.0\lib\net6.0\MathNet.Numerics.dll">
+      <PackagePath>MathNet.Numerics.dll</PackagePath>
+      <Modified>2022-04-03T14:02:52.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MadMax\.nuget\packages\microsoft.extensions.configuration\8.0.0\lib\net8.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
