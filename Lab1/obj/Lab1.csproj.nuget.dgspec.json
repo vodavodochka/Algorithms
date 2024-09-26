@@ -76,17 +76,45 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.72, )"
+              "version": "[8.0.90, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.72, )"
+              "version": "[8.0.90, )"
+            },
+            "Microsoft.Maui.Controls.Core": {
+              "target": "Package",
+              "version": "[8.0.90, )"
+            },
+            "Microsoft.Maui.Controls.Xaml": {
+              "target": "Package",
+              "version": "[8.0.90, )"
+            },
+            "Microsoft.Maui.Core": {
+              "target": "Package",
+              "version": "[8.0.90, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Syncfusion.Blazor.Buttons": {
+              "target": "Package",
+              "version": "[27.1.50, )"
+            },
+            "Syncfusion.Blazor.Core": {
+              "target": "Package",
+              "version": "[27.1.50, )"
+            },
+            "Syncfusion.Maui.Buttons": {
+              "target": "Package",
+              "version": "[27.1.50, )"
             }
           },
           "imports": [
@@ -123,17 +151,45 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.72, )"
+              "version": "[8.0.90, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.72, )"
+              "version": "[8.0.90, )"
+            },
+            "Microsoft.Maui.Controls.Core": {
+              "target": "Package",
+              "version": "[8.0.90, )"
+            },
+            "Microsoft.Maui.Controls.Xaml": {
+              "target": "Package",
+              "version": "[8.0.90, )"
+            },
+            "Microsoft.Maui.Core": {
+              "target": "Package",
+              "version": "[8.0.90, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Syncfusion.Blazor.Buttons": {
+              "target": "Package",
+              "version": "[27.1.50, )"
+            },
+            "Syncfusion.Blazor.Core": {
+              "target": "Package",
+              "version": "[27.1.50, )"
+            },
+            "Syncfusion.Maui.Buttons": {
+              "target": "Package",
+              "version": "[27.1.50, )"
             }
           },
           "imports": [
@@ -170,17 +226,45 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.72, )"
+              "version": "[8.0.90, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.72, )"
+              "version": "[8.0.90, )"
+            },
+            "Microsoft.Maui.Controls.Core": {
+              "target": "Package",
+              "version": "[8.0.90, )"
+            },
+            "Microsoft.Maui.Controls.Xaml": {
+              "target": "Package",
+              "version": "[8.0.90, )"
+            },
+            "Microsoft.Maui.Core": {
+              "target": "Package",
+              "version": "[8.0.90, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Syncfusion.Blazor.Buttons": {
+              "target": "Package",
+              "version": "[27.1.50, )"
+            },
+            "Syncfusion.Blazor.Core": {
+              "target": "Package",
+              "version": "[27.1.50, )"
+            },
+            "Syncfusion.Maui.Buttons": {
+              "target": "Package",
+              "version": "[27.1.50, )"
             }
           },
           "imports": [
@@ -218,11 +302,39 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.72, )"
+              "version": "[8.0.90, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.72, )"
+              "version": "[8.0.90, )"
+            },
+            "Microsoft.Maui.Controls.Core": {
+              "target": "Package",
+              "version": "[8.0.90, )"
+            },
+            "Microsoft.Maui.Controls.Xaml": {
+              "target": "Package",
+              "version": "[8.0.90, )"
+            },
+            "Microsoft.Maui.Core": {
+              "target": "Package",
+              "version": "[8.0.90, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Syncfusion.Blazor.Buttons": {
+              "target": "Package",
+              "version": "[27.1.50, )"
+            },
+            "Syncfusion.Blazor.Core": {
+              "target": "Package",
+              "version": "[27.1.50, )"
+            },
+            "Syncfusion.Maui.Buttons": {
+              "target": "Package",
+              "version": "[27.1.50, )"
             }
           },
           "imports": [

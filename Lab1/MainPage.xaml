@@ -4,33 +4,82 @@
              xmlns:drawable="clr-namespace:Lab1"
              BackgroundColor="White"
              x:Class="Lab1.MainPage">
-    
-    <StackLayout>
-        <GraphicsView x:Name="graphicsView"
-                      WidthRequest="600"
-                      HeightRequest="500"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Графическая область -->
+        <Border Grid.Row="0" Grid.ColumnSpan="2"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Stroke="Gray"
+            BackgroundColor="LightGray"
+            StrokeThickness="4">
+            <GraphicsView x:Name="graphicsView"
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand"
                       BackgroundColor="BlanchedAlmond"/>
-        <StackLayout>
+        </Border>
+
+        <!-- Область с кнопками -->
+        <FlexLayout Grid.Row="1" Grid.Column="0"
+                JustifyContent="SpaceBetween"
+                Padding="10">
             <Button Text="Matrix Multi"
-                    WidthRequest="100"
-                    HeightRequest="50"
-                    Background="Beige"
-                    Clicked="MatrixMulti"/>
+                Background="Beige"
+                MinimumWidthRequest="100"
+                Clicked="MatrixMulti"/>
+            <Button Text="LIS"
+                MinimumWidthRequest="100"
+                Background="Beige"
+                Clicked="LongestIncreasedSubsequence"/>
+            
+        </FlexLayout>
 
-            <Entry Placeholder="Data"
+        <StackLayout Grid.Row="1" Grid.Column="1"
+                 Padding="10"
+                 Spacing="10"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+            <HorizontalStackLayout>
+                <Label Text="Data:"
+                   VerticalOptions="Center"
+                   TextColor="Black"/>
+                <Entry Placeholder="Data"
                    TextChanged="OnEntryData"
-                   WidthRequest="100"
-                   HeightRequest="50"
+                   WidthRequest="200"
+                   HeightRequest="30"
                    TextColor="Black"/>
-
-            <Entry Placeholder="Iterations"
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Loops:"
+                   VerticalOptions="Center"
+                   TextColor="Black"/>
+                <Entry Placeholder="Loops"
                    TextChanged="OnEntryIterations"
-                   WidthRequest="100"
-                   HeightRequest="50"
+                   WidthRequest="200"
+                   HeightRequest="30"
                    TextColor="Black"/>
-
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Polynom Power:"
+                       VerticalOptions="Center"
+                       TextColor="Black"/>
+                <Entry Placeholder="Polynom Power"
+                       TextChanged="OnEntryPolynomPower"
+                       WidthRequest="200"
+                       HeightRequest="30"
+                       TextColor="Black"/>
+            </HorizontalStackLayout>
         </StackLayout>
 
-    </StackLayout>
-</ContentPage>
+    </Grid>
 
+
+</ContentPage>

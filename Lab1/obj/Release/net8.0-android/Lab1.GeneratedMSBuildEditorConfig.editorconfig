@@ -12,102 +12,102 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Lab1
-build_property.ProjectDir = D:\Algorithms\Labs\Lab1\Lab1\
+build_property.ProjectDir = D:\Algorithms\Algorithms\Lab1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 
-[D:/Algorithms/Labs/Lab1/Lab1/App.xaml]
+[D:/Algorithms/Algorithms/Lab1/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[D:/Algorithms/Labs/Lab1/Lab1/AppShell.xaml]
+[D:/Algorithms/Algorithms/Lab1/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[D:/Algorithms/Labs/Lab1/Lab1/MainPage.xaml]
+[D:/Algorithms/Algorithms/Lab1/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[D:/Algorithms/Labs/Lab1/Lab1/Resources/Styles/Colors.xaml]
+[D:/Algorithms/Algorithms/Lab1/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[D:/Algorithms/Labs/Lab1/Lab1/Resources/Styles/Styles.xaml]
+[D:/Algorithms/Algorithms/Lab1/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[D:/Algorithms/Labs/Lab1/Lab1/Resources/Styles/bulma.css]
+[D:/Algorithms/Algorithms/Lab1/Resources/Styles/bulma.css]
 build_metadata.AdditionalFiles.GenKind = Css
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.Resources.Styles.bulma.css
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\bulma.css
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\bulma.css
 
-[D:/Algorithms/Labs/Lab1/Lab1/Resources/Styles/bulma.min.css]
+[D:/Algorithms/Algorithms/Lab1/Resources/Styles/bulma.min.css]
 build_metadata.AdditionalFiles.GenKind = Css
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.Resources.Styles.bulma.min.css
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\bulma.min.css
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\bulma.min.css
 
-[D:/Algorithms/Labs/Lab1/Lab1/Resources/Styles/versions/bulma-no-dark-mode.css]
+[D:/Algorithms/Algorithms/Lab1/Resources/Styles/versions/bulma-no-dark-mode.css]
 build_metadata.AdditionalFiles.GenKind = Css
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.Resources.Styles.versions.bulma-no-dark-mode.css
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\versions\bulma-no-dark-mode.css
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\versions\bulma-no-dark-mode.css
 
-[D:/Algorithms/Labs/Lab1/Lab1/Resources/Styles/versions/bulma-no-dark-mode.min.css]
+[D:/Algorithms/Algorithms/Lab1/Resources/Styles/versions/bulma-no-dark-mode.min.css]
 build_metadata.AdditionalFiles.GenKind = Css
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.Resources.Styles.versions.bulma-no-dark-mode.min.css
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\versions\bulma-no-dark-mode.min.css
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\versions\bulma-no-dark-mode.min.css
 
-[D:/Algorithms/Labs/Lab1/Lab1/Resources/Styles/versions/bulma-no-helpers-prefixed.css]
+[D:/Algorithms/Algorithms/Lab1/Resources/Styles/versions/bulma-no-helpers-prefixed.css]
 build_metadata.AdditionalFiles.GenKind = Css
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.Resources.Styles.versions.bulma-no-helpers-prefixed.css
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\versions\bulma-no-helpers-prefixed.css
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\versions\bulma-no-helpers-prefixed.css
 
-[D:/Algorithms/Labs/Lab1/Lab1/Resources/Styles/versions/bulma-no-helpers-prefixed.min.css]
+[D:/Algorithms/Algorithms/Lab1/Resources/Styles/versions/bulma-no-helpers-prefixed.min.css]
 build_metadata.AdditionalFiles.GenKind = Css
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.Resources.Styles.versions.bulma-no-helpers-prefixed.min.css
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\versions\bulma-no-helpers-prefixed.min.css
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\versions\bulma-no-helpers-prefixed.min.css
 
-[D:/Algorithms/Labs/Lab1/Lab1/Resources/Styles/versions/bulma-no-helpers.css]
+[D:/Algorithms/Algorithms/Lab1/Resources/Styles/versions/bulma-no-helpers.css]
 build_metadata.AdditionalFiles.GenKind = Css
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.Resources.Styles.versions.bulma-no-helpers.css
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\versions\bulma-no-helpers.css
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\versions\bulma-no-helpers.css
 
-[D:/Algorithms/Labs/Lab1/Lab1/Resources/Styles/versions/bulma-no-helpers.min.css]
+[D:/Algorithms/Algorithms/Lab1/Resources/Styles/versions/bulma-no-helpers.min.css]
 build_metadata.AdditionalFiles.GenKind = Css
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.Resources.Styles.versions.bulma-no-helpers.min.css
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\versions\bulma-no-helpers.min.css
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\versions\bulma-no-helpers.min.css
 
-[D:/Algorithms/Labs/Lab1/Lab1/Resources/Styles/versions/bulma-prefixed.min.css]
+[D:/Algorithms/Algorithms/Lab1/Resources/Styles/versions/bulma-prefixed.min.css]
 build_metadata.AdditionalFiles.GenKind = Css
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.Resources.Styles.versions.bulma-prefixed.min.css
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\versions\bulma-prefixed.min.css
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\versions\bulma-prefixed.min.css
 
-[D:/Algorithms/Labs/Lab1/Lab1/Resources/Styles/versions/bulma-prefixed.min.min.css]
+[D:/Algorithms/Algorithms/Lab1/Resources/Styles/versions/bulma-prefixed.min.min.css]
 build_metadata.AdditionalFiles.GenKind = Css
 build_metadata.AdditionalFiles.ManifestResourceName = Lab1.Resources.Styles.versions.bulma-prefixed.min.min.css
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\versions\bulma-prefixed.min.min.css
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\versions\bulma-prefixed.min.min.css
 
-[D:/Algorithms/Labs/Lab1/Lab1/styles/myStyle.css]
+[D:/Algorithms/Algorithms/Lab1/styles/Styles.css]
 build_metadata.AdditionalFiles.GenKind = Css
-build_metadata.AdditionalFiles.ManifestResourceName = Lab1.styles.myStyle.css
-build_metadata.AdditionalFiles.TargetPath = styles\myStyle.css
-build_metadata.AdditionalFiles.RelativePath = styles\myStyle.css
+build_metadata.AdditionalFiles.ManifestResourceName = Lab1.styles.Styles.css
+build_metadata.AdditionalFiles.TargetPath = styles\Styles.css
+build_metadata.AdditionalFiles.RelativePath = styles\Styles.css

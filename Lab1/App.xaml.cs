@@ -1,4 +1,8 @@
-﻿namespace Lab1
+﻿using Microsoft.Maui.Controls;
+using System;
+using System.Diagnostics;
+
+namespace Lab1
 {
     public partial class App : Application
     {

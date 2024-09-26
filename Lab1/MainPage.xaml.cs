@@ -3,8 +3,10 @@ using Microsoft.Maui.Graphics;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Microsoft.Maui.Controls.StyleSheets;
 using Lab1;
 using MathNet.Numerics;
+using MathNet.Numerics.Interpolation;
 
 namespace Lab1
 {
@@ -12,10 +14,10 @@ namespace Lab1
     {
         private List<IterationData> _data;
         private List<IterationData> _data_temp;
-        private Stopwatch _stopwatch;
         private bool Drawing = true;
         public int dataMax = 1;
         public int loopNumber = 1;
+        public int polynomPower = 1;
 
         public MainPage()
         {
@@ -23,7 +25,6 @@ namespace Lab1
 
             _data = new List<IterationData>();
             _data_temp = new List<IterationData>();
-            _stopwatch = new Stopwatch();
 
             // Создание графика
             var chartDrawable = new ChartDrawable(_data);
@@ -33,10 +34,15 @@ namespace Lab1
 
         public void MatrixMulti(object sender, EventArgs e)
         {
-            GraphDraw(1);
+            GraphDraw(new MatrixMultiplication());
         }
 
-        public void GraphDraw(int Button_ID)
+        public void LongestIncreasedSubsequence(object sender, EventArgs e)
+        {
+            GraphDraw(new LongestIncreasingSubsequence());
+        }
+
+        public void GraphDraw(Algorithm algorithm)
         {
             // Очистка данных перед началом нового измерения
             _data.Clear();
@@ -45,10 +51,8 @@ namespace Lab1
             if (Drawing)
             {
                 Drawing = false;
-                for (int iteration = 1; iteration <= loopNumber; iteration++)
-                {
-                    MeasureIterations(Button_ID, iteration);
-                }
+                algorithm.Start(dataMax);
+                _data_temp = algorithm.GetIterationData();
 
                 // Вычисление среднего арифметического значения и обновление графика
                 CalculateAverageData();
@@ -60,6 +64,27 @@ namespace Lab1
                 var chartDrawable = new ChartDrawable(_data, fittedData);
                 graphicsView.Drawable = chartDrawable;
                 Drawing = true;
+            }
+        }
+        
+        public void OnEntryPolynomPower(object sender, EventArgs e)
+        {
+            string text = ((Entry)sender).Text;
+
+            if (string.IsNullOrEmpty(text))
+            {
+                polynomPower = 1;
+            }
+            else
+            {
+                if (int.TryParse(text, out int number))
+                {
+                    polynomPower = number;
+                }
+                else
+                {
+                    polynomPower = 1;
+                }
             }
         }
 
@@ -89,39 +114,25 @@ namespace Lab1
 
         public void OnEntryData(object sender, EventArgs e)
         {
-            string text = ((Entry)sender).Text;
+            if (sender is Entry entry)
+            {
+                string text = entry.Text;
 
-            if (string.IsNullOrEmpty(text))
-            {
-                dataMax = 1;
-            }
-            else
-            {
-                if (int.TryParse(text, out int number))
-                {
-                    dataMax = number;
-                }
-                else
+                if (string.IsNullOrEmpty(text))
                 {
                     dataMax = 1;
                 }
-            }
-
-            // Обновление графика при изменении максимального количества данных
-            //GraphDraw(sender, e);
-        }
-
-        private void MeasureIterations(int process_id, int it)
-        {
-            for (int n = 1; n <= dataMax; n++)
-            {
-                _stopwatch.Restart();
-
-                // Симуляция выполнения итерации
-                SimulateIteration(n, process_id);
-
-                _stopwatch.Stop();
-                _data_temp.Add(new IterationData { IterationNumber = n, TimeSpent = _stopwatch.Elapsed.TotalSeconds });
+                else
+                {
+                    if (int.TryParse(text, out int number))
+                    {
+                        dataMax = number;
+                    }
+                    else
+                    {
+                        dataMax = 1;
+                    }
+                }
             }
         }
 
@@ -138,13 +149,45 @@ namespace Lab1
             _data.AddRange(groupedData);
         }
 
+        private string GetPolynomialString(double[] coefficients)
+        {
+            var terms = new List<string>();
+            for (int i = coefficients.Length - 1; i >= 0; i--)
+            {
+                if (coefficients[i] != 0)
+                {
+                    string term = $"{coefficients[i]:F2}";
+                    if (i > 0)
+                    {
+                        term += $" * x^{i}";
+                    }
+                    terms.Add(term);
+                }
+            }
+            return string.Join(" + ", terms);
+        }
+
+
         private List<IterationData> FitData(List<IterationData> data)
         {
+            if (data.Count < 3)
+            {
+                // Not enough data points for polynomial fitting
+                return new List<IterationData>();
+            }
+
             double[] xData = data.Select(d => (double)d.IterationNumber).ToArray();
             double[] yData = data.Select(d => d.TimeSpent).ToArray();
 
-            int degree = 2; // Степень полинома
+            int degree = polynomPower; // Степень полинома
             double[] polynomialFit = Fit.Polynomial(xData, yData, degree);
+
+            // Вывод полученного полинома
+            string polynomialString = GetPolynomialString(polynomialFit);
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                DisplayAlert("Polynomial Fit", $"Fitted Polynomial: {polynomialString}", "OK");
+            });
 
             var fittedData = new List<IterationData>();
             for (int i = 1; i <= dataMax; i++)
@@ -157,14 +200,6 @@ namespace Lab1
         }
 
 
-        private void SimulateIteration(int n, int id)
-        {
-            if (id == 1)
-            {
-                Lab1.MatrixOperations.MatrixMultiplication(n);
-            }
-            //....
-        }
     }
 
     public class ChartDrawable : IDrawable
@@ -257,12 +292,5 @@ namespace Lab1
                 canvas.DrawString(timeString, marginLeft - 40, (float)y, HorizontalAlignment.Right);
             }
         }
-    }
-
-
-    public class IterationData
-    {
-        public int IterationNumber { get; set; }
-        public double TimeSpent { get; set; }
     }
 }

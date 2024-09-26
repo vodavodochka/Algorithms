@@ -106,8 +106,8 @@ build_metadata.AdditionalFiles.ManifestResourceName = Lab1.Resources.Styles.vers
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\versions\bulma-prefixed.min.min.css
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\versions\bulma-prefixed.min.min.css
 
-[D:/Algorithms/Algorithms/Lab1/styles/myStyle.css]
+[D:/Algorithms/Algorithms/Lab1/styles/Styles.css]
 build_metadata.AdditionalFiles.GenKind = Css
-build_metadata.AdditionalFiles.ManifestResourceName = Lab1.styles.myStyle.css
-build_metadata.AdditionalFiles.TargetPath = styles\myStyle.css
-build_metadata.AdditionalFiles.RelativePath = styles\myStyle.css
+build_metadata.AdditionalFiles.ManifestResourceName = Lab1.styles.Styles.css
+build_metadata.AdditionalFiles.TargetPath = styles\Styles.css
+build_metadata.AdditionalFiles.RelativePath = styles\Styles.css
