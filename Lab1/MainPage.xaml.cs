@@ -29,7 +29,6 @@ namespace Lab1
             // Создание графика
             var chartDrawable = new ChartDrawable(_data);
             graphicsView.Drawable = chartDrawable;
-            // Запуск измерения времени выполнения итераций
         }
 
         public void MatrixMulti(object sender, EventArgs e)
@@ -66,7 +65,7 @@ namespace Lab1
                 Drawing = true;
             }
         }
-        
+
         public void OnEntryPolynomPower(object sender, EventArgs e)
         {
             string text = ((Entry)sender).Text;
@@ -107,31 +106,25 @@ namespace Lab1
                     loopNumber = 1;
                 }
             }
-
-            // Обновление графика при изменении количества итераций
-            //GraphDraw(sender, e);
         }
 
         public void OnEntryData(object sender, EventArgs e)
         {
-            if (sender is Entry entry)
-            {
-                string text = entry.Text;
+            string text = ((Entry)sender).Text;
 
-                if (string.IsNullOrEmpty(text))
+            if (string.IsNullOrEmpty(text))
+            {
+                dataMax = 1;
+            }
+            else
+            {
+                if (int.TryParse(text, out int number))
                 {
-                    dataMax = 1;
+                    dataMax = number;
                 }
                 else
                 {
-                    if (int.TryParse(text, out int number))
-                    {
-                        dataMax = number;
-                    }
-                    else
-                    {
-                        dataMax = 1;
-                    }
+                    dataMax = 1;
                 }
             }
         }
@@ -149,30 +142,29 @@ namespace Lab1
             _data.AddRange(groupedData);
         }
 
-        private string GetPolynomialString(double[] coefficients)
-        {
-            var terms = new List<string>();
-            for (int i = coefficients.Length - 1; i >= 0; i--)
-            {
-                if (coefficients[i] != 0)
-                {
-                    string term = $"{coefficients[i]:F2}";
-                    if (i > 0)
-                    {
-                        term += $" * x^{i}";
-                    }
-                    terms.Add(term);
-                }
-            }
-            return string.Join(" + ", terms);
-        }
+        //private string GetPolynomialString(double[] coefficients)
+        //{
+        //    var terms = new List<string>();
+        //    for (int i = coefficients.Length - 1; i >= 0; i--)
+        //    {
+        //        if (coefficients[i] != 0)
+        //        {
+        //            string term = $"{coefficients[i]:F2}";
+        //            if (i > 0)
+        //            {
+        //                term += $" * x^{i}";
+        //            }
+        //            terms.Add(term);
+        //        }
+        //    }
+        //    return string.Join(" + ", terms);
+        //}
 
 
         private List<IterationData> FitData(List<IterationData> data)
         {
             if (data.Count < 3)
             {
-                // Not enough data points for polynomial fitting
                 return new List<IterationData>();
             }
 
@@ -183,11 +175,11 @@ namespace Lab1
             double[] polynomialFit = Fit.Polynomial(xData, yData, degree);
 
             // Вывод полученного полинома
-            string polynomialString = GetPolynomialString(polynomialFit);
-            Device.BeginInvokeOnMainThread(() =>
-            {
-                DisplayAlert("Polynomial Fit", $"Fitted Polynomial: {polynomialString}", "OK");
-            });
+            //string polynomialString = GetPolynomialString(polynomialFit);
+            //Device.BeginInvokeOnMainThread(() =>
+            //{
+            //    DisplayAlert("Polynomial Fit", $"Fitted Polynomial: {polynomialString}", "OK");
+            //});
 
             var fittedData = new List<IterationData>();
             for (int i = 1; i <= dataMax; i++)
