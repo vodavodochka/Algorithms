@@ -18,12 +18,12 @@ namespace Lab1
             int steps = 0;
         }
 
-        public abstract void MeasureIteration(int iterations);
+        public abstract void MeasureIteration(int iterations, int baseNumber);
 
-        public void Start(int iterations)
+        public void Start(int iterations, int baseNumber)
         {
             iterationData.Clear();
-            MeasureIteration(iterations);
+            MeasureIteration(iterations, baseNumber);
         }
 
         public List<IterationData> GetIterationData()

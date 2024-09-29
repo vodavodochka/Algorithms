@@ -26,7 +26,6 @@
                       VerticalOptions="FillAndExpand"
                       BackgroundColor="BlanchedAlmond"/>
         </Border>
-
         <!-- Область с кнопками -->
         <FlexLayout Grid.Row="1" Grid.Column="0"
                 JustifyContent="SpaceBetween"
@@ -35,6 +34,32 @@
                 Background="Beige"
                 MinimumWidthRequest="100"
                 Clicked="MatrixMulti"/>
+            <VerticalStackLayout>
+                <Button Text="Pow"
+                        MinimumWidthRequest="100"
+                        Background="Beige"
+                        Clicked="Pow"/>
+                <HorizontalStackLayout>
+                    <Label Text="Base:"
+                           VerticalOptions="Center"
+                           TextColor="Black"/>
+                    <Entry Placeholder="Base"
+                           TextChanged="OnEntryBaseNumber"
+                           WidthRequest="200"
+                           HeightRequest="30"
+                           TextColor="Black"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Exponent:"
+                           VerticalOptions="Center"
+                           TextColor="Black"/>
+                    <Entry Placeholder="Exponent"
+                           TextChanged="OnEntryExponent"
+                           WidthRequest="200"
+                           HeightRequest="30"
+                           TextColor="Black"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
             <Button Text="LIS"
                 MinimumWidthRequest="100"
                 Background="Beige"

@@ -23,7 +23,7 @@ namespace Lab1
 
         public static void MatrixMulti(int n)
         {   
-            if (n > 2)
+            if (n > 1)
             {
                 float[,] matrix1 = new float[n, n];
                 float[,] matrix2 = new float[n, n];

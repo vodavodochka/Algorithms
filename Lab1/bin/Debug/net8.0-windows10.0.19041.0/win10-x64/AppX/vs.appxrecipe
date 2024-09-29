@@ -30,7 +30,7 @@
     <AppXManifest Include="D:\Algorithms\Algorithms\Lab1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-09-26T03:37:46.534</Modified>
+      <Modified>2024-09-29T15:04:47.297</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Algorithms\Algorithms\Lab1\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Lab1.dll">
       <PackagePath>Lab1.dll</PackagePath>
-      <Modified>2024-09-26T03:37:46.190</Modified>
+      <Modified>2024-09-29T15:04:46.098</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Algorithms\Algorithms\Lab1\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Lab1.exe</PackagePath>
-      <Modified>2024-09-26T03:37:46.303</Modified>
+      <Modified>2024-09-29T15:04:46.487</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Algorithms\Algorithms\Lab1\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
