@@ -1,0 +1,14 @@
+C:\Coding\Algoritms_Lab1\bin\Debug\net7.0\Algoritms_Lab1.exe
+C:\Coding\Algoritms_Lab1\bin\Debug\net7.0\Algoritms_Lab1.deps.json
+C:\Coding\Algoritms_Lab1\bin\Debug\net7.0\Algoritms_Lab1.runtimeconfig.json
+C:\Coding\Algoritms_Lab1\bin\Debug\net7.0\Algoritms_Lab1.dll
+C:\Coding\Algoritms_Lab1\bin\Debug\net7.0\Algoritms_Lab1.pdb
+C:\Coding\Algoritms_Lab1\obj\Debug\net7.0\Algoritms_Lab1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Coding\Algoritms_Lab1\obj\Debug\net7.0\Algoritms_Lab1.AssemblyInfoInputs.cache
+C:\Coding\Algoritms_Lab1\obj\Debug\net7.0\Algoritms_Lab1.AssemblyInfo.cs
+C:\Coding\Algoritms_Lab1\obj\Debug\net7.0\Algoritms_Lab1.csproj.CoreCompileInputs.cache
+C:\Coding\Algoritms_Lab1\obj\Debug\net7.0\Algoritms_Lab1.dll
+C:\Coding\Algoritms_Lab1\obj\Debug\net7.0\refint\Algoritms_Lab1.dll
+C:\Coding\Algoritms_Lab1\obj\Debug\net7.0\Algoritms_Lab1.pdb
+C:\Coding\Algoritms_Lab1\obj\Debug\net7.0\Algoritms_Lab1.genruntimeconfig.cache
+C:\Coding\Algoritms_Lab1\obj\Debug\net7.0\ref\Algoritms_Lab1.dll
