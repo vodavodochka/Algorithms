@@ -10,9 +10,9 @@ namespace Lab1
     //Итеративный алгоритм возведения в степень
     public class PowerAlgoritmms : AlgorithmWithSteps
     {
-        public override void MeasureIteration(int exponent)
+        public override void MeasureIteration(int exponent, int baseNumber)
         {
-            int baseNumber = 2;
+            //int baseNumber = 2;
             int result = 1;
 
             Stopwatch stopwatch = new Stopwatch();

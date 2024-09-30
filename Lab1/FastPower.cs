@@ -9,9 +9,9 @@ namespace Lab1
 {
     internal class FastPower : AlgorithmWithSteps
     {
-        public override void MeasureIteration(int exponent)
+        public override void MeasureIteration(int exponent, int baseNumber)
         {
-            int baseNumber = 2;
+            //int baseNumber = 2;
             int result = 1;
 
             Stopwatch stopwatch = new Stopwatch();

@@ -9,7 +9,7 @@ namespace Lab1
 {
     internal class RecursivePower : AlgorithmWithSteps
     {
-        public override void MeasureIteration(int exponent)
+        public override void MeasureIteration(int exponent, int baseNumber)
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
