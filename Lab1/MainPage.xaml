@@ -93,10 +93,6 @@
                             Clicked="Pow"
                             Margin="0,0,10,0"/>
                     Right margin of 10 -->
-                    <Button Text="Linear Search"
-                            Background="Beige"
-                            Clicked="LinearSearchAlgorithm"
-                            Margin="0,0,10,0"/>
                     <Button Text="LIS"
                             MinimumWidthRequest="100"
                             Background="Beige"
