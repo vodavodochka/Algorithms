@@ -86,55 +86,52 @@
                             MinimumWidthRequest="100"
                             Clicked="MatrixMulti"
                             Margin="0,0,10,0"/>
-                    <!-- Right margin of 10 -->
+                    <!-- Right margin of 10 
                     <Button Text="Pow"
                             MinimumWidthRequest="100"
                             Background="Beige"
                             Clicked="Pow"
                             Margin="0,0,10,0"/>
-                    <!-- Right margin of 10 -->
+                    Right margin of 10 -->
                     <Button Text="LIS"
                             MinimumWidthRequest="100"
                             Background="Beige"
                             Clicked="LongestIncreasedSubsequence"
                             Margin="0,0,10,0"/>
-                    <!-- Right margin of 10 -->
+                    <!-- Right margin of 10
                     <Button Text="FastPow"
                             MinimumWidthRequest="100"
                             Background="Beige"
                             Clicked="FastPow"
                             Margin="0,0,10,0"/>
-                    <!-- Right margin of 10 -->
+                    
                     <Button Text="RecursivePow"
                             MinimumWidthRequest="100"
                             Background="Beige"
-                            Clicked="RecursivePow"/>
+                            Clicked="RecursivePow"/>-->
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
-                    <Button Text="Bubble Sort"
+                    <!-- asd
+                     <Button Text="Bubble Sort"
                             Background="Beige"
                             MinimumWidthRequest="100"
                             Clicked="BubbleSorting"
                             Margin="0,0,10,0"/>
-                    <!-- Right margin of 10 -->
                     <Button Text="Constant"
                             MinimumWidthRequest="100"
                             Background="Beige"
                             Clicked="ConstantFunc"
                             Margin="0,0,10,0"/>
-                    <!-- Right margin of 10 -->
                     <Button Text="Multiplication"
                             MinimumWidthRequest="100"
                             Background="Beige"
                             Clicked="MultFunc"
                             Margin="0,0,10,0"/>
-                    <!-- Right margin of 10 -->
                     <Button Text="Polynom Horner"
                             MinimumWidthRequest="100"
                             Background="Beige"
                             Clicked="PolynomHornerFunc"
                             Margin="0,0,10,0"/>
-                    <!-- Right margin of 10 -->
                     <Button Text="Polynom Naive"
                             MinimumWidthRequest="100"
                             Background="Beige"
@@ -147,6 +144,7 @@
                             MinimumWidthRequest="100"
                             Background="Beige"
                             Clicked="QuickSorting"/>
+                    -->
                     <Button Text="Tim Sort"
                             MinimumWidthRequest="100"
                             Background="Beige"
