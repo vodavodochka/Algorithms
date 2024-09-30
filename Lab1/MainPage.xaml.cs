@@ -43,6 +43,11 @@ namespace Lab1
             GraphDraw(new LongestIncreasingSubsequence());
         }
 
+        public void LinearSearchAlgorithm(object sender, EventArgs e)
+        {
+            GraphDraw(new LinearSearchAlgoritm());
+        }
+
         //public void Pow(object sender, EventArgs e)
         //{
         //    GraphDraw(new PowerAlgorithm());
