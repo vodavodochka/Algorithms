@@ -34,7 +34,7 @@ namespace Lab1
 
             var chartWidth = width - marginLeft - marginRight;
             var chartHeight = height - marginTop - marginBottom;
-            var xScale = chartWidth / _data.Count;
+            var xScale = chartWidth / _data[_data.Count-1].IterationNumber;
             var yScale = chartHeight / maxTime;
 
             // Отрисовка осей
@@ -79,12 +79,19 @@ namespace Lab1
             canvas.FontSize = 12;
 
             // Метки на нижней оси (итерации)
-            int step = _data.Count < 8 ? 1 : _data.Count / 8;
-            for (int i = 0; i <= _data.Count; i += step)
+            // Определяем максимальное значение IterationNumber
+            int maxIterationNumber = _data.Max(d => d.IterationNumber);
+
+            // Определяем шаг для отображения меток
+            int step = maxIterationNumber < 8 ? 1 : maxIterationNumber / 8;
+
+            // Отображаем метки на нижней оси (итерации)
+            for (int i = 0; i <= maxIterationNumber; i += step)
             {
                 var x = marginLeft + i * xScale;
                 canvas.DrawString(i.ToString(), x, height - marginBottom + 20, HorizontalAlignment.Center);
             }
+
 
             // Метки на левой оси (время)
             var timeStep = maxTime / 10;
