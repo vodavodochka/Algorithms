@@ -15,82 +15,43 @@
         </Grid.ColumnDefinitions>
 
         <!-- Графическая область -->
-        <Border Grid.Row="0" Grid.ColumnSpan="2"
-            HorizontalOptions="FillAndExpand"
-            VerticalOptions="FillAndExpand"
-            Stroke="Gray"
-            BackgroundColor="LightGray"
-            StrokeThickness="4">
+        <Border Grid.Row="0" Grid.Column="0"
+                HorizontalOptions="Fill"
+                VerticalOptions="FillAndExpand"
+                Stroke="Gray"
+                BackgroundColor="LightGray"
+                StrokeThickness="4">
             <GraphicsView x:Name="graphicsView"
-                      HorizontalOptions="FillAndExpand"
-                      VerticalOptions="FillAndExpand"
-                      BackgroundColor="BlanchedAlmond"/>
+                          HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand"
+                          BackgroundColor="BlanchedAlmond"/>
         </Border>
-        <!-- Область с кнопками -->
-        <FlexLayout Grid.Row="1" Grid.Column="0"
-                JustifyContent="SpaceBetween"
-                Padding="10">
-            <Button Text="Matrix Multi"
-                Background="Beige"
-                MinimumWidthRequest="100"
-                Clicked="MatrixMulti"/>
-            <VerticalStackLayout>
-                <Button Text="Pow"
-                        MinimumWidthRequest="100"
-                        Background="Beige"
-                        Clicked="Pow"/>
-                <HorizontalStackLayout>
-                    <Label Text="Base:"
-                           VerticalOptions="Center"
-                           TextColor="Black"/>
-                    <Entry Placeholder="Base"
-                           TextChanged="OnEntryBaseNumber"
-                           WidthRequest="200"
-                           HeightRequest="30"
-                           TextColor="Black"/>
-                </HorizontalStackLayout>
-                <HorizontalStackLayout>
-                    <Label Text="Exponent:"
-                           VerticalOptions="Center"
-                           TextColor="Black"/>
-                    <Entry Placeholder="Exponent"
-                           TextChanged="OnEntryExponent"
-                           WidthRequest="200"
-                           HeightRequest="30"
-                           TextColor="Black"/>
-                </HorizontalStackLayout>
-            </VerticalStackLayout>
-            <Button Text="LIS"
-                MinimumWidthRequest="100"
-                Background="Beige"
-                Clicked="LongestIncreasedSubsequence"/>
-            
-        </FlexLayout>
 
-        <StackLayout Grid.Row="1" Grid.Column="1"
-                 Padding="10"
-                 Spacing="10"
-                 HorizontalOptions="Center"
-                 VerticalOptions="Center">
+        <!-- StackLayout справа от Border -->
+        <StackLayout Grid.Row="0" Grid.Column="1"
+                     Padding="10"
+                     Spacing="10"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Center">
             <HorizontalStackLayout>
                 <Label Text="Data:"
-                   VerticalOptions="Center"
-                   TextColor="Black"/>
+                       VerticalOptions="Center"
+                       TextColor="Black"/>
                 <Entry Placeholder="Data"
-                   TextChanged="OnEntryData"
-                   WidthRequest="200"
-                   HeightRequest="30"
-                   TextColor="Black"/>
+                       TextChanged="OnEntryData"
+                       WidthRequest="200"
+                       HeightRequest="30"
+                       TextColor="Black"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label Text="Loops:"
-                   VerticalOptions="Center"
-                   TextColor="Black"/>
+                       VerticalOptions="Center"
+                       TextColor="Black"/>
                 <Entry Placeholder="Loops"
-                   TextChanged="OnEntryIterations"
-                   WidthRequest="200"
-                   HeightRequest="30"
-                   TextColor="Black"/>
+                       TextChanged="OnEntryIterations"
+                       WidthRequest="200"
+                       HeightRequest="30"
+                       TextColor="Black"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout>
                 <Label Text="Polynom Power:"
@@ -102,9 +63,101 @@
                        HeightRequest="30"
                        TextColor="Black"/>
             </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="BaseNumber:"
+                       VerticalOptions="Center"
+                       TextColor="Black"/>
+                <Entry Placeholder="BaseNumber"
+                       TextChanged="OnEntryBaseNumber"
+                       WidthRequest="200"
+                       HeightRequest="30"
+                       TextColor="Black"/>
+            </HorizontalStackLayout>
         </StackLayout>
 
+        <!-- Область с кнопками -->
+        <FlexLayout Grid.Row="1" Grid.ColumnSpan="2"
+                    JustifyContent="SpaceBetween"
+                    Padding="10">
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Button Text="Matrix Multi"
+                            Background="Beige"
+                            MinimumWidthRequest="100"
+                            Clicked="MatrixMulti"
+                            Margin="0,0,10,0"/>
+                    <!-- Right margin of 10 
+                    <Button Text="Pow"
+                            MinimumWidthRequest="100"
+                            Background="Beige"
+                            Clicked="Pow"
+                            Margin="0,0,10,0"/>
+                    Right margin of 10 -->
+                    <Button Text="LIS"
+                            MinimumWidthRequest="100"
+                            Background="Beige"
+                            Clicked="LongestIncreasedSubsequence"
+                            Margin="0,0,10,0"/>
+                    <!-- Right margin of 10
+                    <Button Text="FastPow"
+                            MinimumWidthRequest="100"
+                            Background="Beige"
+                            Clicked="FastPow"
+                            Margin="0,0,10,0"/>
+                    
+                    <Button Text="RecursivePow"
+                            MinimumWidthRequest="100"
+                            Background="Beige"
+                            Clicked="RecursivePow"/>-->
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <!-- asd
+                     <Button Text="Bubble Sort"
+                            Background="Beige"
+                            MinimumWidthRequest="100"
+                            Clicked="BubbleSorting"
+                            Margin="0,0,10,0"/>
+                    <Button Text="Constant"
+                            MinimumWidthRequest="100"
+                            Background="Beige"
+                            Clicked="ConstantFunc"
+                            Margin="0,0,10,0"/>
+                    <Button Text="Multiplication"
+                            MinimumWidthRequest="100"
+                            Background="Beige"
+                            Clicked="MultFunc"
+                            Margin="0,0,10,0"/>
+                    <Button Text="Polynom Horner"
+                            MinimumWidthRequest="100"
+                            Background="Beige"
+                            Clicked="PolynomHornerFunc"
+                            Margin="0,0,10,0"/>
+                    <Button Text="Polynom Naive"
+                            MinimumWidthRequest="100"
+                            Background="Beige"
+                            Clicked="PolynomNaiveFunc"/>
+                    <Button Text="Summing"
+                            MinimumWidthRequest="100"
+                            Background="Beige"
+                            Clicked="SummingFunc"/>
+                    <Button Text="Quick Sort"
+                            MinimumWidthRequest="100"
+                            Background="Beige"
+                            Clicked="QuickSorting"/>
+                    -->
+                    <Button Text="Tim Sort"
+                            MinimumWidthRequest="100"
+                            Background="Beige"
+                            Clicked="TimSorting"/>
+                    <Button Text="Radix Sort"
+                            MinimumWidthRequest="100"
+                            Background="Beige"
+                            Clicked="RadixSorting"/>
+                </HorizontalStackLayout>
+
+
+            </VerticalStackLayout>
+            
+        </FlexLayout>
     </Grid>
-
-
 </ContentPage>

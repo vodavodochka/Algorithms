@@ -43,9 +43,64 @@ namespace Lab1
             GraphDraw(new LongestIncreasingSubsequence());
         }
 
-        public void Pow(object sender, EventArgs e)
+        //public void Pow(object sender, EventArgs e)
+        //{
+        //    GraphDraw(new PowerAlgorithm());
+        //}
+
+        //public void FastPow(object sender, EventArgs e)
+        //{
+        //    GraphDraw(new FastPower());
+        //}
+
+        //public void RecursivePow(object sender, EventArgs e)
+        //{
+        //    GraphDraw(new RecursivePower());
+        //}
+
+        //public void BubbleSorting(object sender, EventArgs e)
+        //{
+        //    GraphDraw(new BubbleSort());
+        //}
+
+        //public void ConstantFunc(object sender, EventArgs e)
+        //{
+        //    GraphDraw(new ConstantFunction());
+        //}
+
+        //public void MultFunc(object sender, EventArgs e)
+        //{
+        //    GraphDraw(new MultFunction());
+        //}
+
+        //public void PolynomHornerFunc(object sender, EventArgs e)
+        //{
+        //    GraphDraw(new PolynomHorner());
+        //}
+
+        //public void PolynomNaiveFunc(object sender, EventArgs e)
+        //{
+        //    GraphDraw(new PolynomNaive());
+        //}
+
+        //public void SummingFunc(object sender, EventArgs e)
+        //{
+        //    GraphDraw(new SummingFunction());
+        //}
+
+        //public void QuickSorting(object sender, EventArgs e)
+        //{
+        //    GraphDraw(new QuickSort());
+        //}
+
+        public void TimSorting(object sender, EventArgs e)
         {
-            GraphDraw(new PowerAlgorithm());
+            GraphDraw(new Timsort());
+        }
+
+        public void RadixSorting(object sender, EventArgs e)
+        {
+            GraphDraw(new RadixSort());
         }
 
         public void GraphDraw(Algorithm algorithm)
@@ -81,34 +136,13 @@ namespace Lab1
             if (Drawing)
             {
                 Drawing = false;
-                algorithm.Start(exponent, baseNumber);
+                algorithm.Start(dataMax, baseNumber);
                 _data = algorithm.GetIterationData();
 
                 // Обновление графика с аппроксимированными данными
                 var chartDrawable = new ChartDrawable(_data);
                 graphicsView.Drawable = chartDrawable;
                 Drawing = true;
-            }
-        }
-
-        public void OnEntryExponent(object sender, EventArgs e)
-        {
-            string text = ((Entry)sender).Text;
-
-            if (string.IsNullOrEmpty(text))
-            {
-                exponent = 1;
-            }
-            else
-            {
-                if (int.TryParse(text, out int number))
-                {
-                    exponent = number;
-                }
-                else
-                {
-                   exponent = 1;
-                }
             }
         }
 
