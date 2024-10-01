@@ -20,7 +20,7 @@ namespace Lab1
             {
                 steps = 0; // Reset steps for each iteration
                 FastPow(vector[i], baseNumber);
-                iterationData.Add(new IterationData { IterationNumber = i, TimeSpent = steps });
+                iterationData.Add(new IterationData { IterationNumber = vector[i], TimeSpent = steps });
             }
         }
 

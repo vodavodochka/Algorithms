@@ -19,7 +19,6 @@ namespace Lab1
             for (int i = 0; i < exponent; i++)
             {
                 result *= baseNumber;
-                iterationData.Add(new IterationData { IterationNumber = i, TimeSpent = steps });
                 steps += 3;
                 iterationData.Add(new IterationData { IterationNumber = i, TimeSpent = steps });
             }
