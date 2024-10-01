@@ -27,7 +27,6 @@
                           BackgroundColor="BlanchedAlmond"/>
         </Border>
 
-        <!-- StackLayout справа от Border -->
         <StackLayout Grid.Row="0" Grid.Column="1"
                      Padding="10"
                      Spacing="10"
@@ -67,89 +66,95 @@
 
         <!-- Область с кнопками -->
         <FlexLayout Grid.Row="1" Grid.ColumnSpan="2"
-                    JustifyContent="SpaceBetween"
-                    Padding="10">
-            <VerticalStackLayout>
-                <HorizontalStackLayout>
+            JustifyContent="SpaceBetween"
+            Padding="10">
+            <VerticalStackLayout Spacing="10">
+                <HorizontalStackLayout Spacing="10">
                     <Button Text="Matrix Multi"
-                            Background="Beige"
-                            MinimumWidthRequest="100"
-                            Clicked="MatrixMulti"
-                            Margin="0,0,10,0"/>
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="MatrixMulti"/>
                     <Button Text="Pow"
-                            MinimumWidthRequest="100"
-                            Background="Beige"
-                            Clicked="Pow"
-                            Margin="0,0,10,0"/>
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="Pow"/>
                     <Button Text="Linear Search"
-                            Background="Beige"
-                            Clicked="LinearSearchAlgorithm"
-                            Margin="0,0,10,0"/>
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="LinearSearchAlgorithm"/>
                     <Button Text="LIS"
-                            MinimumWidthRequest="100"
-                            Background="Beige"
-                            Clicked="LongestIncreasedSubsequence"
-                            Margin="0,0,10,0"/>
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="LongestIncreasedSubsequence"/>
                     <Button Text="FastPow"
-                            MinimumWidthRequest="100"
-                            Background="Beige"
-                            Clicked="FastPow"
-                            Margin="0,0,10,0"/>
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="FastPow"/>
                     <Button Text="RecursivePow"
-                            MinimumWidthRequest="100"
-                            Background="Beige"
-                            Clicked="RecursivePow"/>
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="RecursivePow"/>
                     <Button Text="PowerSet"
-                            MinimumWidthRequest="100"
-                            Background="Beige"
-                            Clicked="PowerSetting"/>
-                </HorizontalStackLayout>
-                <HorizontalStackLayout>
-                    <Button Text="Bubble Sort"
-                            Background="Beige"
-                            MinimumWidthRequest="100"
-                            Clicked="BubbleSorting"
-                            Margin="0,0,10,0"/>
-                    <Button Text="Constant"
-                            MinimumWidthRequest="100"
-                            Background="Beige"
-                            Clicked="ConstantFunc"
-                            Margin="0,0,10,0"/>
-                    <Button Text="Multiplication"
-                            MinimumWidthRequest="100"
-                            Background="Beige"
-                            Clicked="MultFunc"
-                            Margin="0,0,10,0"/>
-                    <Button Text="Polynom Horner"
-                            MinimumWidthRequest="100"
-                            Background="Beige"
-                            Clicked="PolynomHornerFunc"
-                            Margin="0,0,10,0"/>
-                    <Button Text="Polynom Naive"
-                            MinimumWidthRequest="100"
-                            Background="Beige"
-                            Clicked="PolynomNaiveFunc"/>
-                    <Button Text="Summing"
-                            MinimumWidthRequest="100"
-                            Background="Beige"
-                            Clicked="SummingFunc"/>
-                    <Button Text="Quick Sort"
-                            MinimumWidthRequest="100"
-                            Background="Beige"
-                            Clicked="QuickSorting"/>
-                    <Button Text="Tim Sort"
-                            MinimumWidthRequest="100"
-                            Background="Beige"
-                            Clicked="TimSorting"/>
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="PowerSetting"/>
                     <Button Text="Radix Sort"
-                            MinimumWidthRequest="100"
-                            Background="Beige"
-                            Clicked="RadixSorting"/>
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="RadixSorting"/>
                 </HorizontalStackLayout>
-
-
+                <HorizontalStackLayout Spacing="10">
+                    <Button Text="Bubble Sort"
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="BubbleSorting"/>
+                    <Button Text="Constant"
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="ConstantFunc"/>
+                    <Button Text="Multiplication"
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="MultFunc"/>
+                    <Button Text="Polynom Horner"
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="PolynomHornerFunc"/>
+                    <Button Text="Polynom Naive"
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="PolynomNaiveFunc"/>
+                    <Button Text="Summing"
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="SummingFunc"/>
+                    <Button Text="Quick Sort"
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="QuickSorting"/>
+                    <Button Text="Tim Sort"
+                    Background="Beige"
+                    WidthRequest="100"
+                    HeightRequest="40"
+                    Clicked="TimSorting"/>
+                </HorizontalStackLayout>
             </VerticalStackLayout>
-            
         </FlexLayout>
+
     </Grid>
 </ContentPage>
