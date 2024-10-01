@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Lab1
 {
-    public class ConstFunction : Algorithm
+    public class ConstantFunction : Algorithm
     {
         // Постоянная функция
-        public static int ConstantFunction(int[] v)
+        public static int ConstFunction(int[] v)
         {
             return 1;
         }
@@ -24,7 +24,7 @@ namespace Lab1
                 int[] vector = Vector.GenerateRandomVector(n);
 
                 // Вызов функции для тестирования
-                ConstantFunction(vector);
+                ConstFunction(vector);
 
                 stopwatch.Stop();
                 iterationData.Add(new IterationData { IterationNumber = n, TimeSpent = stopwatch.Elapsed.TotalSeconds });

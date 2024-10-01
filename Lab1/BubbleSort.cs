@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Lab1
 {
-    public class Bubble : Algorithm
+    public class BubbleSort : Algorithm
     {
         // пузырёк
-        public static void BubbleSort(int[] v)
+        public static void Bubble(int[] v)
         {
             int n = v.Length;
             for (int i = 0; i < n - 1; i++)
@@ -37,7 +37,7 @@ namespace Lab1
 
                 // Вызов функций для тестирования
 
-                BubbleSort(vector);
+                Bubble(vector);
 
                 stopwatch.Stop();
                 iterationData.Add(new IterationData { IterationNumber = n, TimeSpent = stopwatch.Elapsed.TotalSeconds });

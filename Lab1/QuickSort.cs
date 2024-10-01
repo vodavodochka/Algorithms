@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace Lab1
 {
-    public class Quick : Algorithm
+    public class QuickSort : Algorithm
     {
 
         // быстрая сортировка
-        public static void QuickSort(int[] array, int left, int right)
+        public static void Quick(int[] array, int left, int right)
         {
             if (left < right)
             {
                 int pivotIndex = Partition(array, left, right);
-                QuickSort(array, left, pivotIndex - 1);
-                QuickSort(array, pivotIndex + 1, right);
+                Quick(array, left, pivotIndex - 1);
+                Quick(array, pivotIndex + 1, right);
             }
         }
 
@@ -54,7 +54,7 @@ namespace Lab1
                 // Вызов функций для тестирования
 
                 int[] vectorForQuickSort = (int[])vector.Clone();
-                QuickSort(vectorForQuickSort, 0, vectorForQuickSort.Length - 1);
+                Quick(vectorForQuickSort, 0, vectorForQuickSort.Length - 1);
 
                 stopwatch.Stop();
                 iterationData.Add(new IterationData { IterationNumber = n, TimeSpent = stopwatch.Elapsed.TotalSeconds });

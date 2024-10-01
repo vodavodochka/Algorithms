@@ -90,7 +90,6 @@
                             Background="Beige"
                             Clicked="LongestIncreasedSubsequence"
                             Margin="0,0,10,0"/>
-
                     <Button Text="FastPow"
                             MinimumWidthRequest="100"
                             Background="Beige"
@@ -100,10 +99,13 @@
                             MinimumWidthRequest="100"
                             Background="Beige"
                             Clicked="RecursivePow"/>
+                    <Button Text="PowerSet"
+                            MinimumWidthRequest="100"
+                            Background="Beige"
+                            Clicked="PowerSetting"/>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
-                    <!-- asd
-                     <Button Text="Bubble Sort"
+                    <Button Text="Bubble Sort"
                             Background="Beige"
                             MinimumWidthRequest="100"
                             Clicked="BubbleSorting"
@@ -135,7 +137,6 @@
                             MinimumWidthRequest="100"
                             Background="Beige"
                             Clicked="QuickSorting"/>
-                    -->
                     <Button Text="Tim Sort"
                             MinimumWidthRequest="100"
                             Background="Beige"
