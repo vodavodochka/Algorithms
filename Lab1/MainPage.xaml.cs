@@ -48,20 +48,20 @@ namespace Lab1
             GraphDraw(new LinearSearchAlgoritm());
         }
 
-        //public void Pow(object sender, EventArgs e)
-        //{
-        //    GraphDraw(new PowerAlgorithm());
-        //}
+        public void Pow(object sender, EventArgs e)
+        {
+            GraphDraw(new PowerAlgorithm());
+        }
 
-        //public void FastPow(object sender, EventArgs e)
-        //{
-        //    GraphDraw(new FastPower());
-        //}
+        public void FastPow(object sender, EventArgs e)
+        {
+            GraphDraw(new FastPower());
+        }
 
-        //public void RecursivePow(object sender, EventArgs e)
-        //{
-        //    GraphDraw(new RecursivePower());
-        //}
+        public void RecursivePow(object sender, EventArgs e)
+        {
+            GraphDraw(new RecursivePower());
+        }
 
         //public void BubbleSorting(object sender, EventArgs e)
         //{
@@ -141,34 +141,18 @@ namespace Lab1
             if (Drawing)
             {
                 Drawing = false;
-                algorithm.Start(dataMax, baseNumber);
+                algorithm.Start(dataMax);
                 _data = algorithm.GetIterationData();
 
+                CalculateAverageData();
+
+                // Аппроксимация данных
+                var fittedData = FitData(_data);
+
                 // Обновление графика с аппроксимированными данными
-                var chartDrawable = new ChartDrawable(_data);
+                var chartDrawable = new ChartDrawable(_data, fittedData);
                 graphicsView.Drawable = chartDrawable;
                 Drawing = true;
-            }
-        }
-
-        public void OnEntryBaseNumber(object sender, EventArgs e)
-        {
-            string text = ((Entry)sender).Text;
-
-            if (string.IsNullOrEmpty(text))
-            {
-                baseNumber = 1;
-            }
-            else
-            {
-                if (int.TryParse(text, out int number))
-                {
-                    baseNumber = number;
-                }
-                else
-                {
-                    baseNumber = 1;
-                }
             }
         }
 

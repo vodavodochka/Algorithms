@@ -63,16 +63,6 @@
                        HeightRequest="30"
                        TextColor="Black"/>
             </HorizontalStackLayout>
-            <HorizontalStackLayout>
-                <Label Text="BaseNumber:"
-                       VerticalOptions="Center"
-                       TextColor="Black"/>
-                <Entry Placeholder="BaseNumber"
-                       TextChanged="OnEntryBaseNumber"
-                       WidthRequest="200"
-                       HeightRequest="30"
-                       TextColor="Black"/>
-            </HorizontalStackLayout>
         </StackLayout>
 
         <!-- Область с кнопками -->
@@ -86,13 +76,11 @@
                             MinimumWidthRequest="100"
                             Clicked="MatrixMulti"
                             Margin="0,0,10,0"/>
-                    <!-- Right margin of 10 
                     <Button Text="Pow"
                             MinimumWidthRequest="100"
                             Background="Beige"
                             Clicked="Pow"
                             Margin="0,0,10,0"/>
-                    Right margin of 10 -->
                     <Button Text="Linear Search"
                             Background="Beige"
                             Clicked="LinearSearchAlgorithm"
@@ -102,17 +90,16 @@
                             Background="Beige"
                             Clicked="LongestIncreasedSubsequence"
                             Margin="0,0,10,0"/>
-                    <!-- Right margin of 10
+
                     <Button Text="FastPow"
                             MinimumWidthRequest="100"
                             Background="Beige"
                             Clicked="FastPow"
                             Margin="0,0,10,0"/>
-                    
                     <Button Text="RecursivePow"
                             MinimumWidthRequest="100"
                             Background="Beige"
-                            Clicked="RecursivePow"/>-->
+                            Clicked="RecursivePow"/>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
                     <!-- asd
