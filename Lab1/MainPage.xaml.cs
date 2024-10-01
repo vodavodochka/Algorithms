@@ -43,55 +43,65 @@ namespace Lab1
             GraphDraw(new LongestIncreasingSubsequence());
         }
 
-        //public void Pow(object sender, EventArgs e)
-        //{
-        //    GraphDraw(new PowerAlgorithm());
-        //}
+        public void LinearSearchAlgorithm(object sender, EventArgs e)
+        {
+            GraphDraw(new LinearSearchAlgoritm());
+        }
 
-        //public void FastPow(object sender, EventArgs e)
-        //{
-        //    GraphDraw(new FastPower());
-        //}
+        public void Pow(object sender, EventArgs e)
+        {
+            GraphDraw(new PowerAlgorithm());
+        }
 
-        //public void RecursivePow(object sender, EventArgs e)
-        //{
-        //    GraphDraw(new RecursivePower());
-        //}
+        public void FastPow(object sender, EventArgs e)
+        {
+            GraphDraw(new FastPower());
+        }
 
-        //public void BubbleSorting(object sender, EventArgs e)
-        //{
-        //    GraphDraw(new BubbleSort());
-        //}
+        public void RecursivePow(object sender, EventArgs e)
+        {
+            GraphDraw(new RecursivePower());
+        }
 
-        //public void ConstantFunc(object sender, EventArgs e)
-        //{
-        //    GraphDraw(new ConstantFunction());
-        //}
+        public void BubbleSorting(object sender, EventArgs e)
+        {
+            GraphDraw(new BubbleSort());
+        }
 
-        //public void MultFunc(object sender, EventArgs e)
-        //{
-        //    GraphDraw(new MultFunction());
-        //}
+        public void ConstantFunc(object sender, EventArgs e)
+        {
+            GraphDraw(new ConstantFunction());
+        }
 
-        //public void PolynomHornerFunc(object sender, EventArgs e)
-        //{
-        //    GraphDraw(new PolynomHorner());
-        //}
+        public void MultFunc(object sender, EventArgs e)
+        {
+            GraphDraw(new MultFunction());
+        }
 
-        //public void PolynomNaiveFunc(object sender, EventArgs e)
-        //{
-        //    GraphDraw(new PolynomNaive());
-        //}
+        public void PolynomHornerFunc(object sender, EventArgs e)
+        {
+            GraphDraw(new PolynomHorner());
+        }
 
-        //public void SummingFunc(object sender, EventArgs e)
-        //{
-        //    GraphDraw(new SummingFunction());
-        //}
+        public void PowerSetting(object sender, EventArgs e)
+        {
+            GraphDraw(new PowerSet());
+        }
 
-        //public void QuickSorting(object sender, EventArgs e)
-        //{
-        //    GraphDraw(new QuickSort());
-        //}
+        public void PolynomNaiveFunc(object sender, EventArgs e)
+        {
+            GraphDraw(new PolynomNaive());
+        }
+
+        public void SummingFunc(object sender, EventArgs e)
+        {
+            GraphDraw(new SummingFunction());
+        }
+
+        public void QuickSorting(object sender, EventArgs e)
+        {
+            GraphDraw(new QuickSort());
+        }
 
         public void TimSorting(object sender, EventArgs e)
         {
@@ -136,34 +146,18 @@ namespace Lab1
             if (Drawing)
             {
                 Drawing = false;
-                algorithm.Start(dataMax, baseNumber);
+                algorithm.Start(dataMax);
                 _data = algorithm.GetIterationData();
 
+                CalculateAverageData();
+
+                // Аппроксимация данных
+                var fittedData = FitData(_data);
+
                 // Обновление графика с аппроксимированными данными
-                var chartDrawable = new ChartDrawable(_data);
+                var chartDrawable = new ChartDrawable(_data, fittedData);
                 graphicsView.Drawable = chartDrawable;
                 Drawing = true;
-            }
-        }
-
-        public void OnEntryBaseNumber(object sender, EventArgs e)
-        {
-            string text = ((Entry)sender).Text;
-
-            if (string.IsNullOrEmpty(text))
-            {
-                baseNumber = 1;
-            }
-            else
-            {
-                if (int.TryParse(text, out int number))
-                {
-                    baseNumber = number;
-                }
-                else
-                {
-                    baseNumber = 1;
-                }
             }
         }
 
