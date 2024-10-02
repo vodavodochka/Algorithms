@@ -42,6 +42,8 @@ namespace Lab1
             canvas.StrokeSize = 2;
             canvas.DrawLine(marginLeft, marginTop, marginLeft, height - marginBottom); // Левая вертикальная ось
             canvas.DrawLine(marginLeft, height - marginBottom, width - marginRight, height - marginBottom); // Нижняя горизонтальная ось
+            canvas.DrawString("t,c", marginLeft - 10, marginTop, HorizontalAlignment.Right);
+            canvas.DrawString("n", width - marginRight, height - marginBottom + 20, HorizontalAlignment.Right);
 
             // Отрисовка данных
             canvas.StrokeColor = Colors.Blue;
@@ -91,6 +93,7 @@ namespace Lab1
                 var x = marginLeft + i * xScale;
                 canvas.DrawString(i.ToString(), x, height - marginBottom + 20, HorizontalAlignment.Center);
             }
+
 
             // Метки на левой оси (время)
             var timeStep = maxTime / 10;
